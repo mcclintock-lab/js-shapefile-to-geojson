@@ -36,7 +36,8 @@
 
                 shapefile = new Shapefile({
                     shp: "testdata/world.shp",
-                    dbf: "testdata/world.dbf"
+                    dbf: "testdata/world.dbf",
+                    jsRoot: '/js-shapefile-to-geojson/'
                 }, function(data){
                     var features = parser.read(data.geojson);
                     vector.addFeatures(features);
